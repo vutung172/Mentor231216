@@ -1,6 +1,7 @@
 package com.fukuoka.unit5;
 
-public interface IStudent {
+public interface IBase {
     void input();
     void output();
+    boolean checkId(String id);
 }

@@ -2,7 +2,7 @@ package com.fukuoka.unit5;
 
 import java.util.Scanner;
 
-public class Student implements IStudent{
+public class Student implements IBase {
     private String id;
     private String name;
     private int age;
@@ -20,14 +20,6 @@ public class Student implements IStudent{
     }
 
     public Student() {
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
     }
 
     public Student(String id, String name, int age, String gender, String phone, Course course) {
@@ -79,6 +71,14 @@ public class Student implements IStudent{
         this.phone = phone;
     }
 
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
+
     @Override
     public void input() {
         Scanner sc = new Scanner(System.in);
@@ -102,4 +102,9 @@ public class Student implements IStudent{
         System.out.printf("%5s | %15s | %10s | %10s | %15s | %15s |\n",id,name,age,gender,phone,getCourse().getName());}
     }
 
+    @Override
+    public boolean checkId(String id) {
+        boolean check = id.equals(this.id);
+        return check;
+    }
 }

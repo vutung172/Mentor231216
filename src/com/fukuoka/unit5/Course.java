@@ -2,7 +2,7 @@ package com.fukuoka.unit5;
 
 import java.util.Scanner;
 
-public class Course implements IStudent{
+public class Course implements IBase {
     private String id;
     private String name;
     private String mentor;
@@ -75,5 +75,11 @@ public class Course implements IStudent{
     @Override
     public void output() {
         System.out.printf("%5s | %15s | %15s | %10s |\n",getId(),getName(),getMentor(),getMaxMember());
+    }
+
+    @Override
+    public boolean checkId(String id) {
+        boolean check = id.equals(this.id);
+        return check;
     }
 }
