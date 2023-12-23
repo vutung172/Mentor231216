@@ -4,7 +4,7 @@ import com.fukuoka.unit5.Course;
 
 import java.util.Arrays;
 
-public class CourseManagement {
+public class StudentManagement {
     private IBase[] iBases;
 
     private int index = 0;
@@ -12,7 +12,7 @@ public class CourseManagement {
     private int defaultEmelent = 4;
 
 
-    public CourseManagement() {
+    public StudentManagement() {
         this.iBases = new IBase[defaultEmelent];
     }
 
@@ -67,8 +67,6 @@ public class CourseManagement {
     }
 
 
-    public void addCourse(Student st, Course course){
-        st.setCourse(course);
-    }
+
 }
 

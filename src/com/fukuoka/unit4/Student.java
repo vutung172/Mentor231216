@@ -30,10 +30,10 @@ public class Student implements IBase {
 
     @Override
     public void output() {
-        if (course == null){
-            System.out.printf("%5s | %15s | %10s | %10s | %15s | %15s |\n",id,name,age,gender,phone,"Chưa xếp lớp");
+        if (subjects == null){
+            System.out.printf("%5s | %15s | %10s | %10s | %15s | %15s |\n",id,name,age,className,avg,"Chưa xếp lớp");
         }else {
-        System.out.printf("%5s | %15s | %10s | %10s | %15s | %15s |\n",id,name,age,gender,phone,getCourse().getName());}
+        System.out.printf("%5s | %15s | %10s | %10s | %15s |\n",id,name,age,className,avg);}
     }
 
     @Override
