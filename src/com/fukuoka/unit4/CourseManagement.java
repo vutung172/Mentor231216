@@ -1,7 +1,8 @@
-package com.fukuoka.unit5;
+package com.fukuoka.unit4;
+
+import com.fukuoka.unit5.Course;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class CourseManagement {
     private IBase[] iBases;
@@ -40,10 +41,10 @@ public class CourseManagement {
                     }
                     iBases[index] = null;
                     index -= 1;
-                    System.err.println("Xóa thành công");
+                    System.out.println("Xóa thành công");
                     break;
                 }
-                System.err.println("Xóa thất bại");
+                System.out.println("Xóa thất bại");
             }
         }
 

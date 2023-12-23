@@ -27,9 +27,9 @@ public class Main {
                         st.input();
                         if (students.searchById(st.getId()) == null) {
                             students.add(st);
-                            System.out.println("Thêm thành công");
+                            System.err.println("Thêm thành công");
                         } else {
-                            System.out.println("ID học sinh đã tồn tại");
+                            System.err.println("ID học sinh đã tồn tại");
                         }
                         System.out.println("Bạn có muốn tiếp tục nhập không (Y/N): ");
                         select = sc.nextLine();
@@ -41,7 +41,7 @@ public class Main {
                         String id = sc.nextLine();
                         Student st = (Student) students.searchById(id);
                         if (st == null) {
-                            System.out.println("Sinh viên không tồn tại");
+                            System.err.println("Sinh viên không tồn tại");
                         } else {
                             System.out.printf("%5s | %15s | %10s | %10s | %15s | %15s |\n", "ID", "Tên sinh viên", "Tuổi", "Giới tính", "Số điện thoại", "Khóa học");
                             students.searchById(id).output();
@@ -59,7 +59,7 @@ public class Main {
                                 System.err.println("Thêm course thành công");
                                 break;
                             } else {
-                                System.out.println("Khóa học không tồn tại");
+                                System.err.println("Khóa học không tồn tại");
                             }
 
                         }
@@ -82,9 +82,9 @@ public class Main {
                         course.input();
                         if (courses.searchById(course.getId()) == null) {
                             courses.add(course);
-                            System.out.println("Thêm thành công");
+                            System.err.println("Thêm thành công");
                         } else {
-                            System.out.println("ID khóa học đã tồn tại");
+                            System.err.println("ID khóa học đã tồn tại");
                         }
                         System.out.println("Bạn có muốn tiếp tục nhập không (Y/N): ");
                         select = sc.nextLine();
@@ -103,7 +103,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Lựa chọn của bạn không phù hợp");
+                    System.err.println("Lựa chọn của bạn không phù hợp");
             }
         } while (true);
     }
